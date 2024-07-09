@@ -1,0 +1,87 @@
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    font-family: sans-serif;
+    padding: 24px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.header img {
+    width: 208px;
+    display: inline-block;
+}
+
+.header h4 {
+    color: #2d3748;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 32px;
+    margin-top: 24px;
+}
+
+.form-grid {
+    display: grid;
+    gap: 32px;
+}
+
+.form-grid .form-group {
+    display: flex;
+    flex-direction: column;
+    padding-right: 15px;
+}
+
+.form-grid label {
+    color: #2d3748;
+    font-size: 0.875rem;
+    margin-bottom: 8px;
+}
+
+.form-grid input {
+    background-color: #f7fafc;
+    width: 100%;
+    color: #2d3748;
+    font-size: 0.875rem;
+    padding: 14px 16px;
+    border-radius: 0.375rem;
+    transition: all 0.2s;
+    border: 1px solid #cbd5e0;
+}
+
+.form-grid input:focus {
+    background-color: transparent;
+    outline: none;
+    border-color: #3182ce;
+}
+
+.submit-button {
+    margin-top: 48px;
+}
+
+.submit-button button {
+    padding: 14px 32px; 
+}
+
+.submit-button button:hover {
+    background-color: #2b6cb0;
+}
+
+@media (min-width: 640px) {
+    .form-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .form-grid .full-width {
+        grid-column: span 2;
+    }
+}
+.poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
