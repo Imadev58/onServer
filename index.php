@@ -1,8 +1,6 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-require_once 'resources/pages/config.php';
-require_once 'config.php';
+    require_once 'resources/pages/config.php';
+    require_once 'config.php';
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo $current_language; ?>">
@@ -10,10 +8,15 @@ require_once 'config.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo getPageTitle('index.php'); ?></title>
-    <link rel="stylesheet" href="resources/assets/home.css">
+    <link rel="icon" type="image/x-icon" href="<?php echo COMPANY_LOGO; ?>">
+    <link rel="stylesheet" href="resources/assets/css/home.css">
+    <link rel="stylesheet" href="resources/assets/css/navbar.css">
 </head>
 <body>
-    <div class="container">
+    
+<?php require_once 'resources/view/navbar.php'; ?>
+
+<div class="container">
         <header>
             <h1><?php echo COMPANY_NAME; ?></h1>
         </header>
