@@ -1,7 +1,8 @@
 <?php
 require_once __DIR__ . '/../../config.php';
 $page_titles = [
-    'index.php' => COMPANY_NAME . ' | Home'
+    'index.php' => COMPANY_NAME . ' | Home',
+    'auth/register/index.php' => COMPANY_NAME . ' | Register'
 ];
 
 function getPageTitle($current_page) {
