@@ -1,16 +1,47 @@
-<nav class="navbar">
-    <div class="container">
-        <div class="navbar-brand">
-            <a href="index.php" class="navbar-logo">
-                <img src="<?php echo COMPANY_LOGO; ?>" alt="<?php echo COMPANY_NAME; ?>" class="logo-img">
-            </a>
-        </div>
-        <ul class="navbar-nav">
-            <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Products</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Status</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Support</a></li>
-            <li><a href="#" class="button login-button">Inloggen</a></li>
-        </ul>
-    </div>
+<nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+  <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <img src="<?php echo COMPANY_LOGO; ?>" class="h-8" alt="logo">
+      <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"><?php echo COMPANY_NAME; ?></span>
+  </a>
+  <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+  <button type="button" class="flex items-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-2" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M4 13h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1m0 8h6c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1m10 0h6c.55 0 1-.45 1-1v-8c0-.55-.45-1-1-1h-6c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1M13 4v4c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1h-6c-.55 0-1 .45-1 1"/>
+  </svg>
+  Login
+</button>
+
+
+      <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
+    </button>
+  </div>
+  <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+      <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+        <li>
+          <a href="#" class="flex items-center block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512">
+              <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M80 212v236a16 16 0 0 0 16 16h96V328a24 24 0 0 1 24-24h80a24 24 0 0 1 24 24v136h96a16 16 0 0 0 16-16V212"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M480 256L266.89 52c-5-5.28-16.69-5.34-21.78 0L32 256m368-77V64h-48v69"/></svg> 
+            <span class="ml-2">Home</span>
+          </a>
+        </li>
+        <li>
+        <a href="#" class="flex items-center block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 100 100"><path fill="currentColor" d="M50 0C27.923 0 10 17.745 10 39.604c0 21.092 16.69 38.351 37.697 39.535V85H40a2.5 2.5 0 0 0-2.5 2.5V90H0v5h37.5v2.5A2.5 2.5 0 0 0 40 100h20a2.5 2.5 0 0 0 2.5-2.5V95H100v-5H62.5v-2.5A2.5 2.5 0 0 0 60 85h-7.303v-5.893c20.78-1.374 37.235-18.48 37.297-39.386a1.2 1.188 0 0 0 .006-.117a1.2 1.188 0 0 0-.004-.106C89.938 17.688 72.041 0 50 0m0 2.377c1.753 0 3.475.128 5.164.357c-.071.095.125.31.813.7l.818.275c1.023-.126.588-.473-.088-.73a37.631 37.631 0 0 1 7.225 2.044c-.647.145-1.631.224-2.604.186c.023 1.91.88 7.012 3.817 6.086c-.522.114 1.658 2.25.53 2.607c-.598 3.992-3.868-2.663-5.527-2.576c-2.479.414.47 1.628-.423 2.223c-2.347 1.995 2.03 4.088 1.677.734c.288 2.704 1.212 2.621 3.426 2.48c-5.057.846 2.816 2.787.26 4.407c-2.534-.231-3.954.704-2.522 3.16c-.672 2.274 1.597 2.373 2.375 3.158l.852-.076l.549-.072c-.021-.003-.044.003-.065 0c3.159-.962 1.525-7.22 4.891-6.81c-.705 2.42 3.184 4.724 1.098 1.214c-1.423-1.78 4.614 1.28 1.955 2.154c2.585 3.38.763-3.157 2.69-1.38c1.251 2.159 2.717.55 3.058.47c.828-.229 2.08.132 2.408.325c3.172 2.999-3.005 1.755-3.096 4.048c.336 1.468-3.39-.393-3.949-.793c-1.635-4.361-5.358-.011-8.096.69c-.093.072-2.342 1.81-2.607 2.04c-.642 3.822-3.745 6.146-4.897 10.013c-.23 2.234.517 5.322.204 7.732c.73 3.091 3.683 4.862 6.257 6.375c1.938 1.235 3.958-1.133 6.043-1.16c1.825-2.656 4.744-.708 6.393-.904c-1.9 2.962 1.414 5.253.476 8.457c-1.47 1.78-1.884 4.146-2.671 6.271c-6.79 6.646-16.122 10.75-26.434 10.75a37.846 37.846 0 0 1-14.555-2.89c.85-.764 1.345-1.903 2.487-2.23c5.185 1.242 2.926-5.11 6.447-6.546c2.359-4.28-5.172-4.963-7.86-6.521c-4.545-.68-4.118-6.158-8.246-7.342c-3.38-.534-2.154-5.358-4.632-5.1c-2.14.394-2.988-2.52-4.18-2.312c-.288.3-1.493-1.956-2.79.53c-3.66-.801-1.098-4.963-2.644-7.292c-.64-1.067 1.828-6.538-.818-3.36c-.104-.181-.174-.43-.217-.72a36.677 36.677 0 0 1 1.45-5.557c.39-.429.838-.641 1.331-.48c1.956-.44 1.306 2.602 1.467 4.486c1.475.626.785-5.525 3.85-5.668c2.085-2.325 4.504-4.303 7.039-5.904c.99.698 3.116.613 4.785-.938c-1.859-.37-1.993-1.773.492-2.326c3.954-1.682-1.784 1.842 1.444 2.352c3.503 1.022.532-3.017 2.193-4.596c-1.739-1.172 1.053-5.73-1.988-3.705c1.052-.745-.585-2.142.355-2.688c.389 1.077 2.344 2.56 3.04.075c1.954.33 1.678-2.473 2.734-3.98c4.956-1.73.854 3.025.668 5.386c1.594 4.602 4.285-1.774 7.12-1.932c3.446.116 3.052-3.146 2.999-4.892a22.587 22.587 0 0 0-2.25-.3c.093 0 .185-.005.279-.005M36.703 6.311c.634-.077-.366 1.286-1.734 1.511c-1.824 1.506-.27-.53.508-.861c.621-.44 1.015-.625 1.226-.65m27.977.996a.774.774 0 0 1 .271.054c.587.964-.652-.024-.271-.054m-32.203.453c1.403.1-.092 3.342-1.65 3.502c-.836-.077-1.406 1.226-2.052 1.652c-.063.286.052-4.463 2.233-4.646c.667-.388 1.145-.531 1.469-.508m20.191.086c-.715.03-1.247.33-.955 1.1c.418.398 1.026.495 1.58.497c3.416-.42.948-1.662-.625-1.597m12.1.619c.151.013.507.147 1.166.476c1.331 1.663-1.822-.535-1.166-.476m-6.579 1.22c-.043.02-.079.1-.091.274c.626.696.28-.355.091-.273m2.418.577c-.05-.014-.055.095.047.443c.673.758.106-.402-.047-.443m6.85.008c.55-.003 2.09.946 1.78 1.98c-1.487 1.19-.8.553-1.09-.766c-.996-.872-1.02-1.213-.69-1.214m-43.36 4.81c.11.013.265.141.477.46c-.531 1.613-.947-.515-.476-.46m7.428.936c.1 0 .26.08.498.302c-.519.388-.794-.306-.498-.302m45.512.285c.141-.016.42.182.885.713c.555-.904 3.42 1.192.933 1.57c-.468 1.852-2.43-2.213-1.818-2.283m-52.883.744c.052-.012.107.02.162.115c-.746 2.176-.526-.035-.162-.115m48.389 2.236a.191.191 0 0 1 .078.002c.448.074 2.212 1.068 2.916 1.76c.431.955-1.413-.747-1.787-.637c-1.044-.771-1.332-1.087-1.207-1.125m-49.309.018c.092.018.164.112.184.326c-1.35.929-.579-.405-.184-.326m54.702 1.77c.069-.03.268.08.677.462c.073.968-.885-.375-.677-.463m-8.22 1.833c-.165.026-.42.312-.767 1.07c.968 1.12 1.265-1.147.768-1.07m10.19.8c-.18.022-.37.223-.496.741c1.505.71 1.038-.812.496-.742m-29.23 2.2c-.195-.017-.468.065-.799.336c1.275.653 1.384-.284.799-.336m1.763.596c-.079-.03-.238.024-.507.248c.277.688.746-.159.507-.248m6.352 4.022c-.077.018-.179.102-.309.294c.492.805.641-.374.309-.294m-40.133.34c-.073 0-.118.18-.074.695c.78.92.293-.698.074-.696m-.435 1.306c-.074-.012-.183.202-.328.842c.44 1.268.547-.805.328-.842m-2.235.668c-1.553-.159 1.306 2.557 1.418 3.754c2.876.768-.402 1.637 2.03 2.607c3.662 1.305 1.399-1.61-.155-2.224c.61-.969-1.544-1.682-2.336-3.88c-.423-.152-.735-.234-.957-.257m45.364.607c-.166 0-.348.3-.424 1.198c1.073.255.787-1.198.424-1.198m-42.34.647a.079.079 0 0 0-.063.008c-.084.053-.088.31.145.873l.181.119c.15-.526-.104-.96-.263-1m39.603.066c-.47.027-.774.238-.44.79l.141.064h.8c2.373-.078.533-.913-.5-.854m-41.83 2.887c-.21-.044-.24.197.264 1.04c1.539.529.2-.944-.264-1.04m-4.297.12c.534 2.287.875 4.947 1.866 6.958c.654 2.462 1.135-.637 1.298 1.303c.555 3.664-1.7 7.44 1.077 10.953c1.32 3.543 4.219 6.026 6.248 9.111c-6.548-6.694-10.58-15.816-10.58-25.88c0-.823.035-1.635.088-2.444m9.573 2.112c-.193.024-.362.226-.409.75c1.763.714.985-.821.409-.75m2.808 2.887c-.078-.03-.158.315-.21 1.358l.03.574c.625 1.65.414-1.841.18-1.932m28.06 2.324c-.199-.021-.2.132.352.653c1.478.29.087-.606-.351-.653m2.15.489c-.093.001-.213.067-.364.238c.613.954.76-.245.363-.238m-.356 1.043c-.141.022-.34.113-.608.314c.735.785 1.217-.412.608-.314m-1.034.152c-.075-.008-.188.101-.343.432c.44.67.568-.408.343-.432m23.377 7.377c-.075-.008-.188.101-.343.432c.44.67.568-.409.343-.432M42.5 90h15v5h-15z" color="currentColor"/></svg>              <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M80 212v236a16 16 0 0 0 16 16h96V328a24 24 0 0 1 24-24h80a24 24 0 0 1 24 24v136h96a16 16 0 0 0 16-16V212"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M480 256L266.89 52c-5-5.28-16.69-5.34-21.78 0L32 256m368-77V64h-48v69"/></svg> 
+            <span class="ml-2">Status</span>
+          </a>
+        </li>
+        <li>
+        <a href="#" class="flex items-center block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M12.26 21.997a10.276 10.276 0 0 1-.52 0a10.004 10.004 0 0 1-8.983-6.173a10.034 10.034 0 0 1 .017-7.69A10.015 10.015 0 0 1 4.908 4.95l.042-.042a10.015 10.015 0 0 1 3.167-2.126a10.034 10.034 0 0 1 7.753-.006a10.015 10.015 0 0 1 3.186 2.138l.03.03c.913.917 1.65 2.01 2.153 3.223a10.012 10.012 0 0 1 .76 3.985a10.004 10.004 0 0 1-6.226 9.112a10.013 10.013 0 0 1-3.512.733m1.772-6.55l2.874 2.873a8.004 8.004 0 0 1-9.812 0l2.874-2.874a4.007 4.007 0 0 0 4.064 0m-5.478-1.415L5.68 16.906a8.004 8.004 0 0 1 0-9.812l2.874 2.874a4.007 4.007 0 0 0 0 4.064m1.528-1.463a2.01 2.01 0 0 1-.014-1.087a1.99 1.99 0 0 1 .518-.896a1.99 1.99 0 0 1 1.932-.518c.328.088.639.26.896.518a1.99 1.99 0 0 1 .518 1.932c-.088.328-.26.639-.518.896a1.99 1.99 0 0 1-1.932.518a1.991 1.991 0 0 1-.896-.518a1.99 1.99 0 0 1-.504-.845m3.95-4.015a4.007 4.007 0 0 0-4.064 0L7.094 5.68a8.004 8.004 0 0 1 9.812 0zm4.288 8.352a8.004 8.004 0 0 0 0-9.812l-2.874 2.874a4.007 4.007 0 0 1 0 4.064z" clip-rule="evenodd"/></svg>
+        <span class="ml-2">Support</span>
+          </a>
+        </li>
+    </ul>
+  </div>
+  </div>
 </nav>
