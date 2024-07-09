@@ -23,9 +23,7 @@
     <div class="content">
 
 </div>
-    <footer>
-        <p><?php echo FOOTER; ?></p>
-    </footer>
+<?php include('resources/view/footer.php'); ?>
 </div>
 </body>
 </html>
