@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo getPageTitle('index.php'); ?></title>
-    <link rel="icon" type="image/x-icon" href="<?php echo LOGO; ?>">
+    <link rel="icon" type="image/x-icon" href="<?php echo COMPANY_LOGO; ?>">
     <link rel="stylesheet" href="resources/assets/css/home.css">
     <link rel="stylesheet" href="resources/assets/css/navbar.css">
 </head>
