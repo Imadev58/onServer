@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($stmt->execute()) {
         echo "Registration successful!";
-        header("Location: /dashboard"); 
+        header("Location: " . "http://" . WEBSITE . "/dashboard");
         exit();
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
