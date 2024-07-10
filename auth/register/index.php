@@ -15,7 +15,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             die("Something went wrong, please contact the developer with the following error: " . $conn->connect_error);
         }
 
-        // Check if email already exists
         $sql = "SELECT * FROM users WHERE Email = ?";
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("s", $email);
@@ -89,10 +88,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </div>
             </div>
 
-            <div class="form-group full-width">
+            <div class="form-group full-width"> <br>
                 <input type="checkbox" name="terms" required>
                 <label for="terms">
-                    I have read the <a href="../terms.php" target="_blank">terms and conditions</a> and <a href="../privacy.php" target="_blank">privacy policy</a> and I agree with them.
+                I have read the <a href="<?php echo "http://" . WEBSITE . "/terms"; ?>" target="_blank" style="color: blue;">terms and conditions</a> and <a href="<?php echo "http://" . WEBSITE . "/privacy"; ?>" target="_blank" style="color: blue;">privacy policy</a> and I agree with them.
                 </label>
             </div>
 
