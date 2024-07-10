@@ -7,10 +7,11 @@ function sendRegistrationWebhook($firstName) {
     $data = [
         'embeds' => [
             [
-                'title' => "{$firstName} has registered on " . WEBSITE,
+                'title' => "🎲 New registered user!",
+                'description' => "> `{$firstName}` has registered on `" . WEBSITE . "`.",
                 'color' => hexdec("1a56db"),
                 'footer' => [
-                    'text' => date('Y-m-d H:i:s')
+                    'text' => "Event time: " . date('Y-m-d H:i:s')
                 ]
             ]
         ]
