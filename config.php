@@ -4,7 +4,7 @@ define('DB_USERNAME', 'root');
 define('DB_PASSWORD', '');
 define('DB_NAME', 'onserver');
 
-
+define('WEBSITE', 'localhost/onServer');
 define('COMPANY_NAME', 'company name');
 define('COMPANY_ADDRESS', 'My awesome street 39');
 define('COMPANY_EMAIL', 'support@onserver.org');
