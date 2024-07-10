@@ -2,7 +2,10 @@
 require_once __DIR__ . '/../../config.php';
 $page_titles = [
     'index.php' => COMPANY_NAME . ' | Home',
-    'auth/register/index.php' => COMPANY_NAME . ' | Register'
+    'auth/register/index.php' => COMPANY_NAME . ' | Register account',
+    'auth/login/index.php' => COMPANY_NAME . ' | Login',
+    'dashboard/index.php' => COMPANY_NAME . ' | Dashboard',
+    'logout.php' => COMPANY_NAME . ' | Logout'
 ];
 
 function getPageTitle($current_page) {
