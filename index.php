@@ -23,7 +23,7 @@
     <div class="content">
 
 </div>
+</div> <br>
 <?php include('resources/view/footer.php'); ?>
-</div>
 </body>
 </html>
