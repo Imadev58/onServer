@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . 'webhookSettings.php';
+require_once __DIR__ . '/webhookSettings.php';
 
 function sendRegistrationWebhook($firstName) {
     $webhookUrl = DISCORD_WEBHOOK;
