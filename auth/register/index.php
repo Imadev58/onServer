@@ -16,6 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             die("Something went wrong, please contact the developer with the following error: " . $conn->connect_error);
         }
 
+
         $sql = "SELECT * FROM users WHERE Email = ?";
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("s", $email);
@@ -30,6 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $stmt->bind_param("ssss", $firstName, $lastName, $email, $password);
 
             if ($stmt->execute()) {
+                sendRegistrationWebhook($firstName);
                 echo "Registration successful!";
                 header("Location: " . "http://" . WEBSITE . "/dashboard");
                 exit();
@@ -89,10 +91,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </div>
             </div>
 
-            <div class="form-group full-width"> <br>
+            <div class="form-group full-width">
                 <input type="checkbox" name="terms" required>
                 <label for="terms">
-                I have read the <a href="<?php echo "http://" . WEBSITE . "/terms"; ?>" target="_blank" style="color: blue;">terms and conditions</a> and <a href="<?php echo "http://" . WEBSITE . "/privacy"; ?>" target="_blank" style="color: blue;">privacy policy</a> and I agree with them.
+                    I have read the <a href="<?php echo "http://" . WEBSITE . "/terms"; ?>" target="_blank" style="color: blue;">terms and conditions</a> and <a href="<?php echo "http://" . WEBSITE . "/privacy"; ?>" target="_blank" style="color: blue;">privacy policy</a> and I agree with them.
                 </label>
             </div>
 
