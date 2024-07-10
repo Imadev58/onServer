@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . '/../../resources/pages/config.php';
 require_once __DIR__ . '/../../config.php';
+require_once __DIR__ . '/../../app/webhooks/registrationWebhook.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['terms'])) {
