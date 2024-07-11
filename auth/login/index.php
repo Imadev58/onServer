@@ -3,6 +3,7 @@ session_start();
 require_once __DIR__ . '/../../resources/pages/config.php';
 require_once __DIR__ . '/../../config.php';
 require_once __DIR__ . '/../../app/webhooks/loginSuccessWebhook.php';
+require_once __DIR__ . '/../../app/webhooks/loginFailedWebhook.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = htmlspecialchars(trim($_POST['email']));
@@ -33,6 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             exit();
         } else {
             $error = "The entered data does not match the records in the database.";
+            sendLoginFailedWebhook($user['FirstName'], $user['LastName'], $email);
         }
 
     } else {
