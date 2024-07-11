@@ -7,6 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['terms'])) {
         $firstName = htmlspecialchars(trim($_POST['name']));
         $lastName = htmlspecialchars(trim($_POST['lname']));
+
         $email = htmlspecialchars(trim($_POST['email']));
         $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
@@ -30,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $stmt->bind_param("ssss", $firstName, $lastName, $email, $password);
 
             if ($stmt->execute()) {
-                sendRegistrationWebhook($firstName);
+                sendRegistrationWebhook($firstName, $lastName);
                 echo "Registration successful!";
                 header("Location: " . "http://" . WEBSITE . "/dashboard");
                 exit();
