@@ -1,14 +1,14 @@
 <?php
 require_once __DIR__ . '/webhookSettings.php';
 
-function sendRegistrationWebhook($firstName) {
+function sendRegistrationWebhook($firstName, $lastName) {
     $webhookUrl = DISCORD_WEBHOOK;
 
     $data = [
         'embeds' => [
             [
-                'title' => "🎲 New registered user!",
-                'description' => "> `{$firstName}` has registered on `" . WEBSITE . "`.",
+                'title' => "🎡 New registered user!",
+                'description' => "> A new user named `{$firstName} {$lastName}` has registered an account on `" . WEBSITE . "`.",
                 'color' => hexdec("1a56db"),
                 'footer' => [
                     'text' => "Event time: " . date('Y-m-d H:i:s')
