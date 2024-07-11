@@ -2,12 +2,12 @@
 require_once __DIR__ . '/../../resources/pages/config.php';
 require_once __DIR__ . '/../../config.php';
 require_once __DIR__ . '/../../app/webhooks/registrationWebhook.php';
+require_once __DIR__ . '/../../app/webhooks/register.errorWebhook.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['terms'])) {
         $firstName = htmlspecialchars(trim($_POST['name']));
         $lastName = htmlspecialchars(trim($_POST['lname']));
-
         $email = htmlspecialchars(trim($_POST['email']));
         $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
@@ -24,6 +24,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $result = $stmt->get_result();
 
         if ($result->num_rows > 0) {
+            sendErrorWebhook($firstName, $lastName, $email);
+
             $error = "This email address is already registered.";
         } else {
             $sql = "INSERT INTO users (FirstName, LastName, Email, Password) VALUES (?, ?, ?, ?)";
