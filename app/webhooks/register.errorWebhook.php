@@ -7,7 +7,7 @@ function sendErrorWebhook($firstName, $lastName, $email) {
     $data = [
         'embeds' => [
             [
-                'title' => "❌ Email already exists",
+                'title' => "❌ Email already exists!",
                 'description' => "> `{$firstName} {$lastName}` tried to register with `{$email}` but this email address is already in the database. This message was given to the end-user:\n```css\nThis email address is already registered.\n```",
                 'color' => hexdec("1a56db"),
                 'footer' => [
