@@ -8,7 +8,7 @@ function sendLoginSuccessWebhook($firstName, $lastName, $redirectPage) {
         'embeds' => [
             [
                 'title' => "✔️ Login success!",
-                'description' => "> User: `{$firstName} {$lastName}` has logged in successfully and has been redirected to `/{$redirectPage}`.",
+                'description' => "> User `{$firstName} {$lastName}` has logged in successfully and has been redirected to `/{$redirectPage}`.",
                 'color' => hexdec("1a56db"),
                 'footer' => [
                     'text' => "Event time: " . date('Y-m-d H:i:s')
