@@ -2,6 +2,7 @@
 session_start();
 require_once __DIR__ . '/../../resources/pages/config.php';
 require_once __DIR__ . '/../../config.php';
+require_once __DIR__ . '/../../app/webhooks/loginSuccessWebhook.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = htmlspecialchars(trim($_POST['email']));
@@ -25,6 +26,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (password_verify($password, $user['Password'])) {
             $_SESSION['user_id'] = $user['UserID']; 
             $_SESSION['email'] = $user['Email'];
+
+            sendLoginSuccessWebhook($user['FirstName'], $user['LastName'], 'dashboard');
+
             header("Location: http://" . WEBSITE . "/dashboard");
             exit();
         } else {
@@ -39,6 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $conn->close();
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="<?php echo $current_language; ?>">
 <head>
