@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="resources/assets/css/flowbite.min.css">
     <script src="https://kit.fontawesome.com/8f24a53a2c.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="bg-white dark:bg-gray-900">
     
 <?php require_once 'resources/view/navbar.php'; ?> 
 
@@ -34,7 +34,7 @@
             </a>
             <a href="#" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
             <?php echo BUTTONTEXT2; ?>
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><path fill="none" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 3h7v7m-1.5-5.5L20 12m-3-7H8a3 3 0 0 0-3 3v16a3 3 0 0 0 3 3h16a3 3 0 0 0 3-3v-9"/></svg>            </a> 
+           <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 3h7v7m-1.5-5.5L20 12m-3-7H8a3 3 0 0 0-3 3v16a3 3 0 0 0 3 3h16a3 3 0 0 0 3-3v-9"/></svg>            </a> 
         </div>
 </div> 
     </div>
