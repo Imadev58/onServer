@@ -12,6 +12,7 @@
     <link rel="icon" type="image/x-icon" href="<?php echo COMPANY_LOGO; ?>">
     <link rel="stylesheet" href="resources/assets/css/home.css">
     <link rel="stylesheet" href="resources/assets/css/flowbite.min.css">
+    <script src="https://kit.fontawesome.com/8f24a53a2c.js" crossorigin="anonymous"></script>
 </head>
 <body>
     
