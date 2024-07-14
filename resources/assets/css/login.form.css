@@ -67,3 +67,63 @@ body {
 .submit-button button:hover {
     background-color: #0056b3;
 }
+
+body.dark {
+    background-color: #111827;
+    color: #ffffff;
+}
+
+body.dark .container {
+    background-color: #1f2937;
+}
+
+body.dark .form-group label {
+    color: #d1d5db;
+}
+
+body.dark .form-group input {
+    background-color: #374151;
+    color: #ffffff;
+    border: 1px solid #4b5563;
+}
+
+body.dark .form-group input::placeholder {
+    color: #9ca3af;
+}
+
+body.dark .form-group input:focus {
+    border-color: #6b7280;
+}
+
+body.dark .submit-button button {
+    background-color: #2563eb;
+}
+
+body.dark .submit-button button:hover {
+    background-color: #1d4ed8;
+}
+
+body.dark a {
+    color: #60a5fa;
+}
+
+body.dark footer {
+    background-color: #1f2937;
+    color: #d1d5db;
+}
+
+body.dark .header h4 {
+    color: #ffffff;
+}
+
+body.dark .form-group label {
+    color: #ffffff;
+}
+
+body .form-group label {
+    color: #4B5563;
+}
+
+body.dark .form-group label {
+    color: #ffffff;
+}

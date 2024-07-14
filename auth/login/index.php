@@ -60,21 +60,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="<?php echo COMPANY_LOGO; ?>">
 </head>
-<body>
+<body class="bg-white dark:bg-gray-900">
     <div class="container">
         <div class="header"> <br><br><br><br>
-            <h4 class="poppins-semibold">Log in to your account</h4>
+        <h4 class="poppins-semibold dark:text-white">Log in to your account</h4>
         </div>
         <?php include(__DIR__ . '/../../resources/view/navbar.php'); ?>
         <form method="POST" action="index.php">
             <div class="form-grid">
                 <div class="form-group full-width">
-                    <label>Email address</label>
-                    <input name="email" type="email" placeholder="Email" required>
+                    <label class="dark:text-white">Email address</label>
+                    <input name="email" type="email" placeholder="Email" required class="dark:bg-gray-800 dark:text-white">
                 </div>
                 <div class="form-group full-width">
-                    <label>Password</label>
-                    <input name="password" type="password" placeholder="**********" required>
+                    <label class="dark:text-white">Password</label>
+                    <input name="password" type="password" placeholder="**********" required class="dark:bg-gray-800 dark:text-white">
                 </div>
             </div>
             <?php if (!empty($error)): ?>
