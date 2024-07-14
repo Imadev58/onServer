@@ -62,46 +62,48 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="<?php echo COMPANY_LOGO; ?>">
+    <script src="path/to/switcher.js"></script>
 </head>
-<body>
+<body class="bg-white dark:bg-gray-900">
     <div class="container">
         <div class="header"> <br><br><br><br>
-            <h4 class="poppins-semibold">Register account</h4>
+        <h4 class="poppins-semibold dark:text-white">Register account</h4>
         </div>
         <?php include('../../resources/view/navbar.php'); ?>
         <form method="POST" action="index.php">
-            <div class="form-grid">
-                <div class="form-group">
-                    <label>First Name</label>
-                    <input name="name" type="text" placeholder="First name" required>
-                </div>
-                <div class="form-group">
-                    <label>Last Name</label>
-                    <input name="lname" type="text" placeholder="Last name" required>
-                </div>
-                <div class="form-group full-width">
-                    <label>Email address</label>
-                    <input name="email" type="email" placeholder="Email" required>
-                </div>
-                <div class="form-group">
-                    <label>Password</label>
-                    <input name="password" type="password" placeholder="**********" required>
-                </div>
-                <div class="form-group">
-                    <label>Confirm Password</label>
-                    <input name="cpassword" type="password" placeholder="**********" required>
-                </div>
-            </div>
+        <div class="form-grid">
+    <div class="form-group">
+        <label class="dark:text-white">First Name</label>
+        <input name="name" type="text" placeholder="First name" required class="dark:bg-gray-800 dark:text-white">
+    </div>
+    <div class="form-group">
+        <label class="dark:text-white">Last Name</label>
+        <input name="lname" type="text" placeholder="Last name" required class="dark:bg-gray-800 dark:text-white">
+    </div>
+    <div class="form-group full-width">
+        <label class="dark:text-white">Email address</label>
+        <input name="email" type="email" placeholder="Email" required class="dark:bg-gray-800 dark:text-white">
+    </div>
+    <div class="form-group">
+        <label class="dark:text-white">Password</label>
+        <input name="password" type="password" placeholder="**********" required class="dark:bg-gray-800 dark:text-white">
+    </div>
+    <div class="form-group">
+        <label class="dark:text-white">Confirm Password</label>
+        <input name="cpassword" type="password" placeholder="**********" required class="dark:bg-gray-800 dark:text-white">
+    </div>
+</div>
+
 
             <div class="form-group full-width">
                 <input type="checkbox" name="terms" required>
                 <label for="terms">
-                    I have read the <a href="<?php echo "http://" . WEBSITE . "/terms"; ?>" target="_blank" style="color: blue;">terms and conditions</a> and <a href="<?php echo "http://" . WEBSITE . "/privacy"; ?>" target="_blank" style="color: blue;">privacy policy</a> and I agree with them.
+                    I have read the <a href="<?php echo "http://" . WEBSITE . "/terms"; ?>" target="_blank" class="text-blue-600 dark:text-blue-400">terms and conditions</a> and <a href="<?php echo "http://" . WEBSITE . "/privacy"; ?>" target="_blank" class="text-blue-600 dark:text-blue-400">privacy policy</a> and I agree with them.
                 </label>
             </div>
 
             <?php if (!empty($error)): ?>
-                <p style="color: red; text-align: center;"><?php echo $error; ?></p>
+                <p class="text-red-500 text-center"><?php echo $error; ?></p>
             <?php endif; ?>
 
             <div class="submit-button">
