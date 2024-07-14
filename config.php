@@ -10,7 +10,7 @@ define('COMPANY_ADDRESS', 'My awesome street 39');
 define('COMPANY_EMAIL', 'support@onserver.org');
 define('COMPANY_PHONE', '+31 000 000');
 define('COMPANY_LOGO', 'https://onserver.org/logo.png');
-define('FOOTER', '© 2022 - 2024  onServer Hosting. All rights reserved.');
+define('FOOTER', '© 2022 - 2024 onServer. All rights reserved.');
 define('CURRENCY', 'EUR'); 
 
 $supported_languages = ['en', 'nl', 'de', 'fr'];
