@@ -96,7 +96,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
             <div class="form-group full-width">
-                <input type="checkbox" name="terms" required>
+                <input type="checkbox" class="size-4 rounded border-gray-300" name="terms" required>
                 <label for="terms">
                     I have read the <a href="<?php echo "http://" . WEBSITE . "/terms"; ?>" target="_blank" class="text-blue-600 dark:text-blue-400">terms and conditions</a> and <a href="<?php echo "http://" . WEBSITE . "/privacy"; ?>" target="_blank" class="text-blue-600 dark:text-blue-400">privacy policy</a> and I agree with them.
                 </label>
