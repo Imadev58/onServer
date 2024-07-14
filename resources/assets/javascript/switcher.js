@@ -1,9 +1,14 @@
-
 document.addEventListener('DOMContentLoaded', function () {
     const themeToggle = document.getElementById('theme-toggle');
     const themeToggleIcon = document.getElementById('theme-toggle-icon');
 
-    if (localStorage.getItem('theme') === 'dark') {
+    const currentTheme = localStorage.getItem('theme');
+    
+    if (!currentTheme) {
+        localStorage.setItem('theme', 'dark');
+        document.documentElement.classList.add('dark');
+        themeToggleIcon.textContent = '☀️';
+    } else if (currentTheme === 'dark') {
         document.documentElement.classList.add('dark');
         themeToggleIcon.textContent = '☀️';
     } else {
