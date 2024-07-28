@@ -5,13 +5,13 @@ define('DB_PASSWORD', '');
 define('DB_NAME', 'onserver');
 
 define('WEBSITE', 'localhost/onServer');
-define('COMPANY_NAME', 'company name');
-define('COMPANY_ADDRESS', 'My awesome street 39');
-define('COMPANY_EMAIL', 'support@onserver.org');
-define('COMPANY_PHONE', '+31 000 000');
-define('COMPANY_LOGO', 'https://onserver.org/logo.png');
-define('FOOTER', '© 2022 - 2024 onServer. All rights reserved.');
-define('CURRENCY', 'EUR'); 
+define('COMPANY_NAME', 'S4 Hosting');
+define('COMPANY_ADDRESS', '');
+define('COMPANY_EMAIL', '');
+define('COMPANY_PHONE', '');
+define('COMPANY_LOGO', '');
+define('FOOTER', '© 2024 S4hosting. All rights reserved.');
+define('CURRENCY', 'CAD'); 
 
 $supported_languages = ['en', 'nl', 'de', 'fr'];
 function getCurrentLanguage() {
